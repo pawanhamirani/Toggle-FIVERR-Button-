@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Agency FB;
+    text-decoration: none;
+}
+
+body{
+   display: flex;
+   justify-self: center;
+   align-items: center;
+   min-height: 100vh;
+   scale: 2;
+}
+
+.toggle{
+    cursor: pointer;
+    position: relative;
+    appearance: none;
+    -webkit-appearance: none;
+    height: 25px;
+    border-radius: 30px;
+    width: 40px;
+    background: #b1b1b1;
+}
+
+.toggle::after{
+    content: '';
+    position: absolute;
+    bottom: .111px;
+    left:0px;
+    border: 2px solid #b1b1b1;
+    border-radius: 20px;
+    height: 21px;
+    width: 21px;
+    box-shadow: 0 0 10px #00000028;
+    background: #ffffff;
+    transition: .2s;
+}
+
+.toggle:checked{
+    background: #1dbf73;
+}
+
+.toggle:checked::after{
+    border: 2px solid #54ca93;
+    transform: translateX(16px);
+}
+
+.text{
+    font-size: 1.5em;
+    font-weight: 600;
+    margin-left: 10px;
+    color: #b1b1b1;
+}
+
+.text.green{
+    color: #1dbf73;
+}
